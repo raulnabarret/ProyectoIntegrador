@@ -2,7 +2,7 @@
   "name": "proyectointegrador",
   "version": "0.1.0",
   "description": "Proyecto Integrador de Tecnologías de la Información",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/raulnabarret/ProyectoIntegrador#readme",
   "dependencies": {
-    "chart.js": "^2.2.2",
     "jquery": "^3.1.0"
   }
 }
