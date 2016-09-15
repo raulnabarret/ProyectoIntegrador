@@ -18,5 +18,11 @@
   "homepage": "https://github.com/raulnabarret/ProyectoIntegrador#readme",
   "dependencies": {
     "jquery": "^3.1.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-watch": "^4.3.9"
   }
 }
