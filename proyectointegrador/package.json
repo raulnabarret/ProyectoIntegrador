@@ -1,10 +1,22 @@
 {
   "name": "proyectointegrador",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
+  "description": "Proyecto Integrador de Tecnologías de la Información",
+  "main": "app.js",
   "scripts": {
     "start": "node ./bin/www"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raulnabarret/ProyectoIntegrador.git"
+  },
+  "author": "Raúl Nabarret",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/raulnabarret/ProyectoIntegrador/issues"
+  },
+  "homepage": "https://github.com/raulnabarret/ProyectoIntegrador#readme",
   "dependencies": {
     "body-parser": "~1.13.2",
     "cookie-parser": "~1.3.5",
