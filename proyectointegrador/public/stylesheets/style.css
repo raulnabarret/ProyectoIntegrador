@@ -3,7 +3,6 @@ body {
     flex-direction: column;
 	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
     min-height: 100vh;
-  	padding: 50px;
 }
 
 a {

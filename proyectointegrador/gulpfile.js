@@ -9,12 +9,12 @@ gulp.task('default', ['scripts'])
 //Scripts 
 gulp.task('scripts', function() {
 
-    var scripts = ['./src/bootstrap/js/bootstrap.min.js', './src/js/*.js']
+    var scripts = ['src/js/app.js']
 
     return watch(scripts, function() {
         gulp.src(scripts)
             .pipe(concat('bundle.js'))
             .pipe(uglify())
-            .pipe(gulp.dest('public/javascripts'))
+            .pipe(gulp.dest('public/javascripts/'))
     })
 })
