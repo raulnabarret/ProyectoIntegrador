@@ -1,5 +1,47 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+    .navbar-fixed
+      nav
+        .nav-wrapper.blue.darken-2
+          // Logo
+          a.brand-logo(href='#') Proyecto Integrador
+          // Elements
+          ul#nav-mobile.right.hide-on-med-and-down
+            li
+              a(href='#') Gráfica1
+            li
+              a(href='#') Gráfica2
+            li
+              a(href='#') Gráfica3
+    main
+      section
+        .container
+          // Canvas
+          canvas#myChart(width='400', height='400')
+    footer.page-footer.blue.darken-4
+      .container
+        .row
+          .col.l6.s12
+            h5.white-text Footer
+            p.grey-text.text-lighten-4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, ipsum.
+          .col.l4.offset-l2.s12
+            h5.white-text Links
+            ul
+              li
+                a.grey-text.text-lighten-3(href='#!') Link 1
+              li
+                a.grey-text.text-lighten-3(href='#!') Link 2
+              li
+                a.grey-text.text-lighten-3(href='#!') Link 3
+              li
+                a.grey-text.text-lighten-3(href='#!') Link 4
+      .footer-copyright
+        .container
+          | © 2016 Copyright
+          a.grey-text.text-lighten-4.right(href='#!') Tecnológico de Monterrey
+    script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js')
+    // Chart.js
+    script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.min.js')
+    script(type='text/javascript', src='public/bundle.js')
