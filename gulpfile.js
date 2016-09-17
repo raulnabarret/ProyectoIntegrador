@@ -4,7 +4,7 @@ var uglify = require('gulp-uglify')
 var watch = require('gulp-watch')
 
 //Default
-gulp.task('default', ['styles', 'scripts'])
+gulp.task('default', ['scripts'])
 
 //Scripts 
 gulp.task('scripts', function() {

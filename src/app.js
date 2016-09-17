@@ -1,11 +1,11 @@
 var ctx = document.getElementById("myChart");
 
 var myChart = new Chart(ctx, {
-    type: 'bar',
+    type: 'line',
     data: {
-        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        labels: ["8:00 am", "8:00 am", "8:00 am", "8:00 am", "8:00 am", "8:00 am"],
         datasets: [{
-            label: '# of Votes',
+            label: 'Centígrados',
             data: [12, 19, 3, 5, 2, 3],
             backgroundColor: [
                 'rgba(54, 162, 235, 0.2)'
