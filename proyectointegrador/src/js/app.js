@@ -1,12 +1,12 @@
-var ctx = document.getElementById("myChart")
+var $chart = $("#Chart")
 
-var myChart = new Chart(ctx, {
-    type: 'line',
+var chart = new Chart($chart, {
+    type: 'bar',
     data: {
         labels: ["8:00 am", "8:00 am", "8:00 am", "8:00 am", "8:00 am", "8:00 am"],
         datasets: [{
             label: 'Centígrados',
-            data: [12, 19, 3, 5, 2, 3],
+            data: [12, 19, 13, 15, 12, 13],
             backgroundColor: [
                 'rgba(54, 162, 235, 0.2)'
             ],

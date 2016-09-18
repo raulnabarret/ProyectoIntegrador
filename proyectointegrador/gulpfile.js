@@ -9,7 +9,7 @@ gulp.task('default', ['scripts'])
 //Scripts 
 gulp.task('scripts', function() {
 
-    var scripts = ['src/js/app.js']
+    var scripts = ['src/js/*.js']
 
     return watch(scripts, function() {
         gulp.src(scripts)

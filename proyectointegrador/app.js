@@ -9,7 +9,7 @@ var mongoose = require('mongoose')
 
 var routes = require('./routes/index')
 var form = require('./routes/form')
-// var users = require('./routes/users')
+var humidity = require('./routes/humidity')
 
 var app = express()
 
@@ -26,9 +26,9 @@ app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/', routes)
+app.use('/humidity', humidity)
 app.use('/form', form)
 app.use('/create', form)
-// app.use('/users', users)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
