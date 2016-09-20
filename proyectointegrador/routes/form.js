@@ -6,21 +6,31 @@ var Comment = mongoose.model('comments')
 /* GET form. */
 router.get('/', function(req, res) {
   Comment.find(function(err, comments){
-    console.log(comments)
-    res.render(
-      'form',
-      {title : 'My form', comments : comments}
-    )
+    
+    if(err) console.log(err)
+
+    res.render('form', { title : 'Add Data', comments : comments })
+
   })
 })
 
 /* POST form. */
 router.post('/', function(req, res) {
-  new Comment({title : req.body.comment})
-  .save(function(err, comment) {
-    console.log(comment)
-    res.redirect('form')
+
+  Comment.remove({}, function(err, comment){
+    if(err) console.log(err)
   })
+
+  for (var i = 0; i <= 5000; i++) {
+
+    var rand = Math.floor((Math.random()*100)+1)
+
+    new Comment({title : rand}).save(function(err, comment) {
+      if(err) console.log(err)
+    })    
+  }
+
+  console.log('Done')
 })
 
 module.exports = router

@@ -2,6 +2,9 @@ var gulp = require('gulp')
 var concat = require('gulp-concat')
 var uglify = require('gulp-uglify')
 var watch = require('gulp-watch')
+var browserify = require('browserify')
+var transform = require('vinyl-transform')
+
 
 //Default
 gulp.task('default', ['scripts'])
@@ -18,3 +21,5 @@ gulp.task('scripts', function() {
             .pipe(gulp.dest('public/javascripts/'))
     })
 })
+
+// browserify src/js/app.js -o public/javascripts/bundle.js
