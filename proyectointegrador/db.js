@@ -2,7 +2,13 @@ var mongoose = require('mongoose')
 var Schema   = mongoose.Schema
 
 var Dato = new Schema({
-    title : String,
+	id 	 : Number,
+    tipo : String,
+    dato : Number,
+    fecha: {
+        type: Date,
+        default: Date.now
+    }
 })
 
 mongoose.model('datos', Dato)

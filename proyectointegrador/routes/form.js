@@ -17,20 +17,30 @@ router.get('/', function(req, res) {
 /* POST form. */
 router.post('/', function(req, res) {
 
+
+  // Vaciar la Base de Datos
   Dato.remove({}, function(err, dato){
     if(err) console.log(err)
   })
 
+  // Crear e insertar 5,000 datos: id, tipo, random, _id, fecha
   for (var i = 0; i <= 5000; i++) {
 
+    // Crear número random de 0 a 100
     var rand = Math.floor((Math.random()*100)+1)
 
-    new Dato({title : rand}).save(function(err, dato) {
+    // Crear nuevo registro en la base de datos y asignarle valores
+    new Dato({
+      id : i,
+      tipo : 'Temperatura',
+      dato : rand
+    }).save(function(err, dato) {
       if(err) console.log(err)
-    })    
+        
+      console.log(dato)
+    })
   }
 
-  console.log('Done')
 })
 
 module.exports = router
