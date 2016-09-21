@@ -4,9 +4,7 @@ block content
     .navbar-fixed
       nav
         .nav-wrapper.blue.darken-2
-          // Logo
           a.brand-logo(href='/') Proyecto Integrador
-          // Elements
           ul#nav-mobile.right.hide-on-med-and-down
             li
               a(href='/temperature') Temperature
@@ -17,7 +15,16 @@ block content
     main
       section
         .container
-          h1 Proyecto Integrador
+          canvas#Chart(width='400', height='400')
+          form(method="post" action="/create")
+            label(for="comment") Agregar 5,000 datos aleatorios:
+            input(type="submit", value="Save")
+          - for dato in datos
+            div
+              p= dato.id
+              p= dato.tipo
+              p= dato.dato
+              p= dato.fecha          
     footer.page-footer.blue.darken-4
       .container
         .row

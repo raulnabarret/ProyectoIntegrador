@@ -9,7 +9,7 @@ router.get('/', function(req, res) {
     
     if(err) console.log(err)
 
-    res.render('form', { title : 'Add Data', datos : datos })
+    res.render('temperature', { title : 'Temperature', datos : datos })
 
   })
 })
@@ -36,7 +36,7 @@ router.post('/', function(req, res) {
       dato : rand
     }).save(function(err, dato) {
       if(err) console.log(err)
-        
+
       console.log(dato)
     })
   }

@@ -8,8 +8,9 @@ var bodyParser = require('body-parser')
 var mongoose = require('mongoose')
 
 var routes = require('./routes/index')
-var form = require('./routes/form')
-var humidity = require('./routes/humidity')
+var temperature = require('./routes/temperature')
+// var humidity = require('./routes/humidity')
+var movement = require('./routes/movement')
 
 var app = express()
 
@@ -26,9 +27,10 @@ app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/', routes)
-app.use('/humidity', humidity)
-app.use('/form', form)
-app.use('/create', form)
+// app.use('/humidity', humidity)
+app.use('/temperature', temperature)
+app.use('/movement', movement)
+app.use('/create', movement)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
