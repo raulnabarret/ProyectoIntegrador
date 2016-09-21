@@ -2,8 +2,6 @@ var gulp = require('gulp')
 var concat = require('gulp-concat')
 var uglify = require('gulp-uglify')
 var watch = require('gulp-watch')
-var browserify = require('browserify')
-var transform = require('vinyl-transform')
 
 
 //Default
