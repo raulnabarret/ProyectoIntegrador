@@ -1,15 +1,15 @@
 var express = require('express')
 var router = express.Router()
 var mongoose = require('mongoose')
-var Comment = mongoose.model('comments')
+var Dato = mongoose.model('datos')
 
 /* GET form. */
 router.get('/', function(req, res) {
-  Comment.find(function(err, comments){
+  Dato.find(function(err, datos){
     
     if(err) console.log(err)
 
-    res.render('form', { title : 'Add Data', comments : comments })
+    res.render('form', { title : 'Add Data', datos : datos })
 
   })
 })
@@ -17,7 +17,7 @@ router.get('/', function(req, res) {
 /* POST form. */
 router.post('/', function(req, res) {
 
-  Comment.remove({}, function(err, comment){
+  Dato.remove({}, function(err, dato){
     if(err) console.log(err)
   })
 
@@ -25,7 +25,7 @@ router.post('/', function(req, res) {
 
     var rand = Math.floor((Math.random()*100)+1)
 
-    new Comment({title : rand}).save(function(err, comment) {
+    new Dato({title : rand}).save(function(err, dato) {
       if(err) console.log(err)
     })    
   }
