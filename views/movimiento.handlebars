@@ -1,0 +1,32 @@
+<div>
+	<h1>Movimiento</h1>
+</div>
+{{!-- <div id="table-location-mov">
+
+</div> --}}
+
+<!-- Location where the chart will be added -->
+<div id="chart-location-mov">
+
+</div>
+
+<script src="/public/js/fusioncharts_mov.js" charset="utf-8"></script>
+<script id="tabular-template-mov" type="text/html">
+<h2>Tabular Data</h2>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <td>Tipo</td>
+      <td>Dato</td>
+    </tr>
+  </thead>
+  <tbody>
+    \{{#each data}}
+    <tr>
+      <td>\{{label}}</td>
+      <td>\{{value}}</td>
+    </tr>
+    \{{/each}}
+  </tbody>
+</table>
+</script>

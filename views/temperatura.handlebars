@@ -1,0 +1,32 @@
+<div>
+	<h1>Temperatura</h1>
+</div>
+{{!-- <div id="table-location-temp">
+
+</div> --}}
+
+<!-- Location where the chart will be added -->
+<div id="chart-location-temp">
+
+</div>
+
+<script src="/public/js/fusioncharts_temp.js" charset="utf-8"></script>
+<script id="tabular-template-temp" type="text/html">
+<h3>Tabular Data</h3>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <td>Tipo</td>
+      <td>Dato</td>
+    </tr>
+  </thead>
+  <tbody>
+    \{{#each data}}
+    <tr>
+      <td>\{{label}}</td>
+      <td>\{{value}}</td>
+    </tr>
+    \{{/each}}
+  </tbody>
+</table>
+</script>
