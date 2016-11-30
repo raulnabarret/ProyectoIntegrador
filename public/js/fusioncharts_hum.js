@@ -56,11 +56,7 @@ $(document).ready(function() {
                     data: data["data"]
                 }
             })
-
             lineChart.render()
-
         }
-
     })
-
 })
